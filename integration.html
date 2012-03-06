@@ -1,0 +1,80 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+  <title>biographer: Google Summer of Code 2012</title>
+</head>
+<body>
+
+</body style="margin:0px;padding:0px">
+  <div style="background-color:#808080;margin:0px;padding:10px">
+    <div style=
+    "padding:10px;background-color:#FFFFFF;border:1px solid
+black;margin-left:auto;margin-right:auto;width:800px">
+<h1>Reactome / WikiPathways Integration</h1>
+
+
+
+<h2>Motivation</h2>
+<p>
+
+Our primary goal when developing biographer in first place was to create a
+software component which can visualize reaction networks without manual
+intervention. The visualization follows the SBGN standard which defines the
+symbolics that should be used for this type of networks. Clearly, the next step
+would be to connect this component to the sources of such networks, large
+biological reaction databases, among which Reactome and WikiPathways belong to
+the most popular. 
+</p>
+<p>
+
+These databases contain information on reactions between thousands of compounds
+(i.e. proteins, chemical species, complexes, nucleotide sequences). To make this
+amount of information more accessible to the users, network diagrams are
+provided which visualize the connections between the different entities. These
+visualizations are usually limited to manual laid out diagrams of single
+biological pathways, modules in the network which are functionally strongly
+related. 
+</p>
+<p>
+
+Here, we propose a more generic way of visualizing networks using the biographer
+component. Arbitrary parts of the complete network, which could be the
+aforementioned pathways or the neighborhoods of any compound, are visualized
+automatically in a SBGN compliant manner. 
+</p>
+<p>
+
+Furthermore, the integrated editor functionality of biographer could be used to
+propose/post corrections to the underlying network data or allow the user to
+download modified versions of the pathways.
+</p>
+
+
+<h2>Specifications / Features</h2>
+
+<ol>
+<li>input based on REST API (alternatives?)
+<li>integration of component into Reactome/WikiPathways interface (switchable, by separate url, etc.)
+<li>interaction with other parts of interface (i.e. Compound details, pathway menu, etc.)
+<li>use of predefined layout information
+<li>automatic layout of neighborhoods, pathways
+<li>"click-through" network exploration
+<li>visualization of overlays ?
+<li>upstream submission ? 
+</ol>
+<h2>General Specifications</h2>
+
+<ol>
+<li>JavaScript library library
+<li>LGPL
+</ol>
+
+<h2>Mentors</h2>
+<ul>
+<li>Falko
+<li>Rectome/Wikipathways mentor
+</ul>
+</div>
+</div>
+</body>
+</html>
