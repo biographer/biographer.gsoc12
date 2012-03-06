@@ -1,0 +1,42 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+  <title>biographer: Google Summer of Code 2012</title>
+</head>
+<body>
+
+</body style="margin:0px;padding:0px">
+  <div style="background-color:#808080;margin:0px;padding:10px">
+    <div style=
+    "padding:10px;background-color:#FFFFFF;border:1px solid
+black;margin-left:auto;margin-right:auto;width:800px">
+<h1>Client side layout using Google Native Client</h1>
+
+<p>
+biographer's layout component has been written in C++ for speed reasons. 
+This requires the layout calculation to be performed on the server. This is not a problem as long as 
+only a few users request network layouts at a time. However, in order to be prepared for future 
+applications of biographer we would like provide options for client-side layout calculations.
+
+As a JavaScript port will most likely too slow for interactive network generation, we propose to use 
+Google Native Client to run biographer's C++ code on the client. Google Native Client can run compiled code
+from a list of coding languages (inlcuding C++) in the Google Chrome Browser. This feature is still under development
+but chances are good that also other browser will support it at some point.
+
+<h2>Core specification</h2>
+<ol>
+  <li> compile biographer's layout algorithm  for the use with GNC
+  <li> implement a message handler on the javaScript and C++ side
+  <li> performance improvements to the layout algorithm
+</ol>
+
+
+<h2>Mentors</h2>
+<ul>
+  <li>Thomas Handorf</li>
+  <li>t.b.a.</li>
+</ul>
+</div>
+</div>
+</body>
+</html>
