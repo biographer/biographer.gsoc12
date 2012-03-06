@@ -1,0 +1,80 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+
+<html>
+<head>
+  <title>biographer: Google Summer of Code 2012</title>
+</head>
+<body>
+
+</body style="margin:0px;padding:0px">
+  <div style="background-color:#808080;margin:0px;padding:10px">
+    <div style=
+    "padding:10px;background-color:#FFFFFF;border:1px solid
+black;margin-left:auto;margin-right:auto;width:800px">
+<h1>Boolean network visualization</h1>
+Our goal for this idea is to visualize a Boolean Simulation on a reaction
+network inside the biographer component developed in last year's GSoC.
+
+<h2>Motivation</h2>
+<p>
+Boolean networks are a simplified way to describe regulatory networks. This
+simplification consists in the fact that species can only have two states,
+either active or inactive. It has been shown in various approaches that Boolean
+networks can reproduce experimental behavior of biological systems while still
+being simple to handle and computationally less challenging than for instance
+ordinary differential equation models.
+</p>
+<p>
+In order to graphically represent the evolution of reaction networks over time,
+we will integrate a tool into the existing biographer software which creates a
+Boolean network from the the reaction graph by an automated model generation
+algorithm, like <a href="http://code.google.com/p/libscopes/">libScopes</a>, and which also simulates it. The Boolean network and
+the reaction graph will be synchronized in a way that modifications on the
+reaction graph are automatically applied to the Boolean network which thus can
+be modified interactively.
+</p>
+<p>
+Furthermore, biographer already includes a possibility to directly load Boolean
+networks from the existing package <a href="http://code.google.com/p/booleannet/">booleannet</a>. This will be extended to other
+packages like R's <a href="http://www.informatik.uni-ulm.de/ni/mitarbeiter/HKestler/boolnet/">BoolNet</a> and libScopes. This direct import however requires a
+visualization to be created from the Boolean network data automatically (i.e.
+the other way around as mentioned in the first goal). In particular, Boolean
+networks are best represented by the <a href="http://www.sbgn.org/">SBGN</a> activity flow standard which also
+includes symbols for the logical functions like AND or OR. The biographer
+component has to be extended accordingly.
+</p>
+<p>
+The generated Boolean network together with its  initial conditions will be
+submitted to the server for the calculations of the simulation. The approach
+will start with deterministic synchronous Boolean models but can also be
+extended to asynchronous or probabilistic Boolean networks. 
+</p>
+
+<h2>Core Specifications and features:</h2>
+
+<ol>
+<li> Based on existing Boolean simulation tools (e.g. booleannet in python or
+BoolNet in R)
+<li> Automated generation of a Boolean network from defined reaction networks by
+automatic generation algorithm
+<li> Input of defined Boolean network and visualization using SBGN activity flow
+representation
+<li> Input initial state for simulation (e.g. selecting nodes in the graph)
+<li> Representation of synchronous Boolean simulation in the biographer reaction
+graph through time-dependent colors/shades of vertices (variable state) and
+edges (edge activity)
+<li> Manipulation of steady states through clicking on nodes, thereby changing
+their state and see how perturbations propagate through network
+<li> Possible extension to asynchronous or probabilistic Boolean network
+simulation with continuous shading of nodes for expression probability
+</ol>
+<h2>Mentors:</h2>
+
+<ul>
+<li>Till Scharp
+<li>Matthias Bock
+</ul>
+</div>
+</div>
+</body>
+</html>
