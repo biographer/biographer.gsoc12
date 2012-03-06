@@ -1,0 +1,17 @@
+body {
+  margin: 0px;
+  padding: 0px;
+  background-color: #808080;
+}
+
+body > div {
+  padding:10px
+}
+
+body > div > div {
+  padding: 10px;
+  background-color: #FFFFFF;
+  border: 1px solid black;
+  margin: 0 auto;
+  width:800px
+}
