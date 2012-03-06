@@ -86,7 +86,7 @@ experience when working on one of our project proposals.
 This year we again proposed a list of ideas which extend the functionality of biographer. The focus will be 
 on widening the audience by implementing interfaces to public database resources, creating a pad version and extending to
 further dialects of the SBGN standard.
-
+</p>
 <h2>Idea 1. Build a front-end for the public databases WikiPathway and Reactome</h2>
 
 <h2>Idea 2. Create a pad version of biographer</h2>
@@ -100,8 +100,89 @@ further dialects of the SBGN standard.
 <h2>Idea 6. Make a client-side version of the layout module using Google Native Client</h2>
 
 
-
+<h1>Biological reaction networks</h1>
 </p>
+Systems Biology is a field in Biology which studies the components and its
+interactions of a biological system as a whole. In the view of Systems Biology,
+systems show emergent properties which are due to the complex interplay of the
+components and which were not visible by investigating the components
+individually.
+</p>
+<p>
+Part of our research activities center around the creation and analysis of
+biological reaction networks. These networks provide intuitive views of
+interactions underlying biological processes which play a role in metabolism or
+signalling. By investigating these networks deep insights can be gained into the
+principles of cellular function and diseases like for example cancer.
+A typical signaling pathway can represent receptor-binding events, protein
+complexes, phosphorylation reactions, translocations and transcriptional
+regulation, with only a minimal set of symbols, lines and arrows. These powerful
+representations are essential tools, common among the textbooks and review
+articles that document any given field of biology.
+</p>
+<p>
+Within that context, the visualization of biological networks is a major point
+of interest. For a given, small to medium scale network a manual layout may be
+the best choice. Tools for this task exist, the most famous representative is
+certainly <a href="http://www.celldesigner.org/">CellDesigner</a>. Nevertheless, creating a manual layout is time consuming
+and is generally only worth the effort for a well prepared network subject to
+publication.
+</p>
+<p>
+With the advent of electronic databases of biological networks (<a href="http://www.kegg.jp/">KEGG</a>, <a href="http://www.reactome.org/">Reactome</a>),
+in principle a large number of network candidates can be generated, creating the
+need for automated layouts for the subsequent evaluation and analysis. A lot of
+software packages for automated graph layout exist, among the most prominent are
+<a href="http://graphviz.org/">GraphViz</a> and <a href="http://www.cytoscape.org/">Cytoscape</a>. Most packages are quite general with respect to the type
+of graph they accept. This, of course, opens a wide range of possible
+applications.
+</p>
+<p>
+The reaction networks mentioned before, however, represent a special kind of
+graph. Specific features include the existence of reactions and metabolites as
+special node types, the different meaning of substrate, product and modulator
+edges of reactions and the optional locality information. These particularities
+justify layout algorithms optimized for this type of graph.
+</p>
+<h1>Guide to students</h1>
+<ol>
+<li>We are seeking eager and highly skilled students willing to contribute to open
+source in a research environment. Interest in biological or medical engineering
+is a strong plus.
+<li>We recommend you that you contact us already before you send in your
+application. In this way you can obtain more information and we can also help
+you with your submission.
+<li>Apart from the ideas presented above we are open to suggestions from students.
+If you would like to contribute an idea to the project please include a detailed
+description of it in your application.
+<li>Your application should include a statement of interest (why do you want to
+participate), a project proposal (following one of our ideas or an independent
+idea) with preliminary timeline, as well as your CV stressing on your
+experiences. Please note, the knowledge of the computer languages (C/C++, perl,
+python or JS) are a prerequisite.
+<li>Take one of the tests or provide relevant code examples. Although we do not
+require you to complete the test, doing so may increase the chances of your
+application.
+<li>Applications to one of our offered projects go through the Google Summer of Code
+website (<a href="http://www.google-melange.com/gsoc/homepage/google/gsoc2012">http://www.google-melange.com/gsoc/homepage/google/gsoc2012</a>). There you can find all information about
+the admission. Please note that the application window is open only from March
+26 to April 6, 2011.
+<li>Google grants a stipend to the accepted students. This comes along with the
+liability to proceed as described in the project proposal. Google requires us to
+report on your overall progress. For the projects mentioned above you can expect
+about 1.5 months of full-time work between May 23 and August 30.
+Please check the <a href="http://www.google-melange.com/document/show/gsoc_program/google/gsoc2012/faqs">FAQ</a> 
+and <a href="http://www.google-melange.com/document/show/gsoc_program/google/gsoc2012/userguide">User Guide</a> on the google website for application
+advise.
+</ol>
+<h1>Contact information</h1>
+
+We opened a group for discussing with us and other prospective students: <a href="http://groups.google.com/group/biographer-gsocstud">http://groups.google.com/group/biographer-gsocstud</a>
+<br>
+You can contact us directly through tbp-gsoc@googlegroups.com
+<br>
+The organization's administrator is Thomas Handorf:
+  &nbsp;<span>handorf</span><span>@<span style="display:none">noemail.de</span><span>physik.hu-berlin.de</span></span>
 </div>
 </div>
 </div>
