@@ -2,6 +2,8 @@ body {
   margin: 0px;
   padding: 0px;
   background-color: #808080;
+  font-family: sans-serif;
+  text-align: justify;
 }
 
 body > div {
