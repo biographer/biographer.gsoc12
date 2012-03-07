@@ -10,7 +10,7 @@
     <img src="images/title.png" usemap="#titlemap">
     <map name="titlemap">
   <area shape="rect" alt="TBP Homepage"
-href="http://www2.hu-berlin.de/biologie/theorybp/" coords="242,102,598,128" />
+href="http://code.google.com/p/biographer/" coords="242,102,598,128" />
   <area shape="rect" alt="Google Summer of Code"
 href="http://code.google.com/soc" coords="206,70,627,94" />
   <area shape="rect" alt="TBP Homepage"
@@ -28,24 +28,24 @@ languages used are JavaScript, Python and C++.
 <h1>About biographer</h1>
 
 <p>
-<a href="http://code.google.com/p/biographer/">biographer</a> aims at providing a standard library for the in-browser visualization
-of biological reaction networks with.
-an optional automated layout. 
+<a href="http://code.google.com/p/biographer/">biographer</a> aims at providing a standard library for in-browser visualization
+of biological reaction networks. This type of network is of particular importance in the field of systems biology and plays an important role
+in understanding the function or dysfunction of cells. More details on these networks can be found at the end of this page. 
 
 </p>
 <p>
-biographer has been started during last year's Google Summer of Code in the
+biographer was started during last year's Google Summer of Code in the
 <a href="http://www2.hu-berlin.de/biologie/theorybp/">Theoretical Biophysics Group</a> at Humboldt University.
-It matured into a JavaScript library generating a SVG representation of such
-networks. Apart from the automatic layout which is optimized for 
-reaction networks it features an editor component for network modifications and
+It matured into a JavaScript library generating SVG representations of such
+networks. It features an automatic layout which is optimized for 
+reaction networks, an editor for network modifications and
 a server component which 
 allows the import from various sources of biological networks, including the
 <a href="http://www.reactome.org/">Reactome</a> database and <a href="http://sbml.org/">SBML</a> files. 
 
 </p>
 <p>
-Visualizations follow the <a href="http://www.sbgn.org/">SBGN</a> standard which defines how reaction networks
+Visualizations follow the <a href="http://www.sbgn.org/">SBGN</a> Process Description standard which defines how reaction networks
 should be graphically represented.
 This includes structured nodes which visualize the composition of protein
 complexes, different edge types for 
@@ -65,8 +65,7 @@ focus on biological processes in Yeast, Bacillus subtilis and mammalian cells.
 <p>
 As vivid users of open source software we are also eagerly committed to feeding
 back to the community by conceiving and implementing new <a href="http://www2.hu-berlin.de/biologie/theorybp/index.php?goto=tools">software tools</a> or
-participating in existing projects. Details on our software activities can be
-found here. The listed tools are used by a large community of biologists of
+participating in existing projects. These tools are used by a large community of biologists of
 different specializations, including metabolism, signaling and dynamical
 modeling.  
 </p>
@@ -79,9 +78,9 @@ experience when working on one of our project proposals.
 
 <h1>Proposed Ideas</h1>
 <p>
-This year we again proposed a list of ideas which extend the functionality of biographer. The focus will be 
+This year we propose a number of extensions to the functionality of biographer. The focus will be 
 on widening the audience by implementing interfaces to public database resources, creating a tablet version and extending to
-further dialects of the SBGN standard.
+further dialects of the SBGN standard. We propose the following projects but remain open to variants suggested by the applicant:
 </p>
 
 <ol>
@@ -103,10 +102,10 @@ components and which were not visible by investigating the components
 individually.
 </p>
 <p>
-Part of our research activities center around the creation and analysis of
-biological reaction networks. These networks provide intuitive views of
-interactions underlying biological processes which play a role in metabolism or
-signalling. By investigating these networks deep insights can be gained into the
+Part of our research activities focus on the creation and analysis of
+biological reaction networks. These networks provide intuitive views on the
+underlying biological interactions and processes which play a role in metabolism or
+signaling. By investigating these networks deep insights can be gained into the
 principles of cellular function and diseases like for example cancer.
 A typical signaling pathway can represent receptor-binding events, protein
 complexes, phosphorylation reactions, translocations and transcriptional
@@ -127,13 +126,12 @@ With the advent of electronic databases of biological networks (<a href="http://
 in principle a large number of network candidates can be generated, creating the
 need for automated layouts for the subsequent evaluation and analysis. A lot of
 software packages for automated graph layout exist, among the most prominent are
-<a href="http://graphviz.org/">GraphViz</a> and <a href="http://www.cytoscape.org/">Cytoscape</a>. Most packages are quite general with respect to the type
-of graph they accept. This, of course, opens a wide range of possible
-applications.
+<a href="http://graphviz.org/">GraphViz</a> and <a href="http://www.cytoscape.org/">Cytoscape</a>. Most packages are, however, quite general with respect to the type
+of graph they accept. 
 </p>
 <p>
-The reaction networks mentioned before, however, represent a special kind of
-graph. Specific features include the existence of reactions and metabolites as
+The reaction networks mentioned before represent a special class of
+graphs. Specific features include the existence of reactions and metabolites as
 special node types, the different meaning of substrate, product and modulator
 edges of reactions and the optional locality information. These particularities
 justify layout algorithms optimized for this type of graph.
@@ -152,7 +150,7 @@ description of it in your application.
 <li>Your application should include a statement of interest (why do you want to
 participate), a project proposal (following one of our ideas or an independent
 idea) with preliminary timeline, as well as your CV stressing on your
-experiences. Please note, the knowledge of the computer languages (C/C++, perl,
+experiences. Please note, the knowledge of the computer languages (C/C++,
 python or JS) are a prerequisite.
 <li>Take one of the tests or provide relevant code examples. Although we do not
 require you to complete the test, doing so may increase the chances of your
@@ -167,7 +165,7 @@ report on your overall progress. For the projects mentioned above you can expect
 about 1.5 months of full-time work between May 21 and August 24.
 Please check the <a href="http://www.google-melange.com/document/show/gsoc_program/google/gsoc2012/faqs">FAQ</a> 
 and <a href="http://www.google-melange.com/document/show/gsoc_program/google/gsoc2012/userguide">User Guide</a> on the google website for application
-advise.
+advice.
 </ol>
 <h1>Contact information</h1>
 
