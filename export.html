@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>biographer: Google Summer of Code 2012</title>
+  <link rel="stylesheet" href="main.css" type="text/css" />
+</head>
+<body>
+<div>
+<div>
+<h1>Export to CytoScape and CellDesigner</h1>
+
+<h2>Motivation</h2>
+<p>
+   <a href="http://www.celldesigner.org/">CellDesigner</a> and <a href="http://www.cytoscape.org/">Cytoscape</a> are widely used tools for visualizing and analyzing biological networks. 
+   biographer on the other side is focussed on retrieving networks from databases and laying it out 
+   in a visually appealing way. Consequently, a useful workflow for a researcher would be to create 
+   an initial version of the network using biographer and then use other tools for either fine-tuning 
+   the layout or for further analysis.
+</p>
+
+<p>
+   The two most import exchange formats for biological networks are <a href="http://sbml.org/">SBML</a> 
+   and <a href="http://www.biopax.org/">BioPax</a> of which biographer 
+   already supports SBML. The two mentioned tools also do support this format. However, SBML does not 
+   support positional information (even though the latest format specification do define it, this is not
+   commonly used). This problem can be circumvented by a set of XML extensions which have
+   been introduced by Celldesigner. Within CytoScape, the plugin BiNoM support the visualization of 
+   reaction networks and can import SBML files which can interprete the CellDesigner extensions.
+</p>
+
+<p>
+   An extension to project will be to develop a BioPax import/export module. As BioPax is one of the major formats
+   for exchanging reaction networks, this module will help to extend the reach of biographer. On the output
+   side, BioPax does also not support positional information directly, but there exist ideas that SBGM-ML
+   will be used for that. SBGN-ML support on the import side is already inlcuded in biographer.
+</p>
+<h2>Core specification</h2>
+<ol>
+  <li>
+     Enable export of SBML from the internal biographer format (biographer so far only imports SBML)
+  </li>
+  <li>
+     Support of positional information (CellDesigner XML extensions)
+  </li>
+  <li>
+      Support for Protein Complexes and Modifications  (CellDesigner XML extensions) 
+  </li>
+  <li>
+      BioPAX support
+  </li>
+</ol>
+
+<h2>Coding Languages</h2>
+<ol>
+  <li>
+     Integration into server component (python)
+  </li>
+  <li>
+      Some JavaScript/HTML would be good for interface connection
+  </li>
+</ol>
+
+<h2>Further resources</h2>
+<ul>
+  <li>Converter From CellDesinger Layout extensions -> SBML layout extensions</li>
+  <li>HTML</li>
+  <li>some CSS</li>
+</ul>
+
+
+<h2>Mentors</h2>
+<ul>
+  <li>Samuel Drulhe</li>
+  <li>t.b.a.</li>
+</ul>
+
+</div>
+</div>
+</body>
+</html>
