@@ -7,7 +7,7 @@
 <body>
   <div>
     <div>
-<h1>Reactome / WikiPathways Integration</h1>
+<h1>Reactome / WikiPathways Front-end</h1>
 
 
 
@@ -27,7 +27,7 @@ the most popular.
 These databases contain information on reactions between thousands of compounds
 (i.e. proteins, chemical species, complexes, nucleotide sequences). To make this
 amount of information more accessible to the users, network diagrams are
-provided which visualize the connections between the different entities. These
+provided which visualize the connections between the different entities. So far, these
 visualizations are usually limited to manual laid out diagrams of single
 biological pathways, modules in the network which are functionally strongly
 related. 
@@ -40,24 +40,29 @@ aforementioned pathways or the neighborhoods of any compound, are visualized
 automatically in a SBGN compliant manner. 
 </p>
 <p>
-
-Furthermore, the integrated editor functionality of biographer could be used to
+The goal of this project will be to develop an alternative front-end for these databases
+which uses the capabilities of biographer and which explores directions in which 
+interfaces for reaction database could develop in future. The project will be supported
+on the technical side by Reactome and/or WikiPathways.
+<!--Furthermore, the integrated editor functionality of biographer could be used to
 propose/post corrections to the underlying network data or allow the user to
-download modified versions of the pathways.
+download modified versions of the pathways.-->
 </p>
-
+<p>
+Student proposals would probably concentrate on one of the databases mentioned, or propose
+an integrative way of displaying information of both DBs together. It should be noted, although more appealing, the latter
+is a much more complex approach and we will more rigorously weigh the feasibility of such an proposal.
+</p>
 
 <h2>Specifications / Features</h2>
 
 <ol>
-<li>input based on REST API (alternatives?)
-<li>integration of component into Reactome/WikiPathways interface (switchable, by separate url, etc.)
-<li>interaction with other parts of interface (i.e. Compound details, pathway menu, etc.)
+<li>input based on REST API (at least for Reactome)
+<li>development of navigation elements (e.g. pathway browser, etc.)
+<li>display of node information
 <li>use of predefined layout information
 <li>automatic layout of neighborhoods, pathways
 <li>"click-through" network exploration
-<li>visualization of overlays ?
-<li>upstream submission ? 
 </ol>
 <h2>General Specifications</h2>
 
