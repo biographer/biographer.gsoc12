@@ -1,19 +1,19 @@
 body {
   margin: 0px;
-  padding: 0px;
+  padding: 5px;
   background-color: #808080;
   font-family: sans-serif;
   text-align: justify;
 }
 
 body > div {
-  padding:10px
+  margin: 0 auto;
+  width:800px;
+  border: 1px solid black;
+  padding:0px
 }
 
 body > div > div {
-  padding: 10px;
+  padding: 20px;
   background-color: #FFFFFF;
-  border: 1px solid black;
-  margin: 0 auto;
-  width:800px
 }
