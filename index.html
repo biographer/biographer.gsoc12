@@ -83,13 +83,39 @@ further dialects of the SBGN standard. We propose the following projects but rem
 </p>
 
 <ol>
-  <li><a href="integration.html">Build a front-end for the public databases WikiPathway and Reactome</a></li>
-  <li><a href="pad.html">Tablet and gesture support for the visualization</a></li>
-  <li><a href="boolnet.html">Add a Boolean Network modeling tool</a></li>
-  <li><a href="sbgn_er.html">Extend layout to SBGN-ER formalism</a></li>
-  <li><a href="export.html">Export to CellDesigner/CytoScape</a></li>
-  <li>Implement a Grid-based layout in JavaScript</li>
-  <li><a href="gnc.html">Make a client-side version of the layout module using Google Native Client</a></li>
+  <li><h3><a href="integration.html">Build a front-end for the public databases Reactome and WikiPathway</a></h3>
+  Knowledge on biochemical interactions is provided through a growing number of public databases. These database 
+  represent this data in terms of large reaction networks. This project idea proposes to create an front-end to such 
+  databases which enables the user to visually navigate through the stored information.</li>
+  <li><h3><a href="pad.html">Tablet and gesture support for the visualization</a></h3>
+  Tablets provide an easy and intuitive way to access visual information. In particular in lab environments, where space for 
+  regular computers with peripherals is limited, tablets can make complex scientific information available and also easily navigable through
+  touch gestures. 
+  </li>
+  <li><h3><a href="boolnet.html">Add a Boolean Network modeling tool</a></h3>
+  Boolean Networks are a popular way to investigate the dynamical properties of biological networks. In deed, such analyses are 
+  a main focus in our research group. In this project we propose to first, create and simulate a Boolean Network corresponding to 
+  a reaction network loaded and visualized in biographer and second, visualize the temporal evolution of the network state as 
+  calculated by the simulation.
+  </li>
+  <li><h3><a href="export.html">Export to CellDesigner/CytoScape</a></h3>
+  CellDesigner and Cytoscape are popular tools for visualizing and analyzing reaction networks. However, with respect to providing an optimized 
+  layout for reaction networks they suck. biographer provides this capability and hence an export to these tools for further network analysis will 
+  certainly be highly appreciated by the scientific community. This is even more useful if the biographer component is incorporated into 
+  a database front-end as pursued in idea 1.
+  </li>
+  <li><h3><a href="sbgn_er.html">Extend layout to SBGN-ER formalism</a></h3>
+  SBGN-ER (Entity Relationship) is an alternative way to graphically represent reaction networks. Although it is initially more complex
+  than the so far used SBGN-PD (Process Description) it's complexity does not increase less drastic in highly combinatorial reaction networks,
+  where a number of species can interact in arbitrary order with one another. Here we propose to extend the layout algorithm to also support this 
+  network type optimally. 
+  </li>
+  <li><h3><a href="gnc.html">Make a client-side version of the layout module using Google Native Client</a></h3></li>
+  biographer's layouter is implemented in C++ for speed reasons. Currently this requires the layout to be calculated on the server. In a high load multi-user
+  scenario this will to problems. A layout calculation on the client side will hence dramatically increase the user capacity of the server. Clearly, the speed 
+  issue exists on the client side as well such that we need to keep the C++ implementation. A way to overcome this issue is to use Google Native client which
+  allows to execute compiled code within the client's browser. 
+  <li><h3>Implement a Grid-based layout in JavaScript</h3></li>
 </ol>
 
 
