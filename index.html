@@ -83,71 +83,93 @@ further dialects of the SBGN standard. We propose the following projects but rem
 </p>
 
 <ol>
-  <li><h3><a href="integration.html">Build a front-end for the public databases Reactome and WikiPathway</a></h3>
+	<li><h3><a href="integration.html"><del>Build a front-end for the public databases Reactome and WikiPathway</del><br/>Creating a Java Script based library for SBGN files (used by WikiPathways); itegration of the Reactome REST interface</a></h3>
+  <p>
   Knowledge on biochemical interactions is provided through a growing number of public databases. These database 
-  represent this data in terms of large reaction networks. This project idea proposes to create an front-end to such 
-  databases which enables the user to visually navigate through the stored information.</li>
+  represent this data in terms of large reaction networks.  <del> This project idea proposes to create an front-end to such 
+  databases which enables the user to visually navigate through the stored information.  </del>
+  This project idea proposes to create a JavaScript base version of libSBGN that can read and write SBGN-ML (used by WikiPathways) and jSBGN (used by Biographer) and/or to create a visual navigator for the Reactome database using its REST interface.
+  </p>
+  </li>
   <li><h3><a href="pad.html">Tablet and gesture support for the visualization</a></h3>
+  <p>
   Tablets provide an easy and intuitive way to access visual information. In particular in lab environments, where space for 
   regular computers with peripherals is limited, tablets can make complex scientific information available and also easily navigable through
   touch gestures. 
+  </p>
   </li>
   <li><h3><a href="boolnet.html">Add a Boolean Network modeling tool</a></h3>
+  <p>
   Boolean networks are a popular way to investigate the dynamical properties of biological networks. Indeed, such analyses are 
   a main focus in our research group. In this project we propose to first, create and simulate a Boolean network corresponding to 
   a reaction network loaded and visualized in biographer and second, visualize the temporal evolution of the network state as 
   calculated by the simulation.
+  </p>
   </li>
   <li><h3><a href="export.html">Export to CellDesigner/CytoScape</a></h3>
+  <p>
   CellDesigner and Cytoscape are popular tools for visualizing and analyzing reaction networks. However, with respect to providing an optimized 
   layout for reaction networks they yield mediocre results. biographer provides this capability and hence an export to these tools for further network analysis will 
   certainly be highly appreciated by the scientific community. This is even more useful if the biographer component is incorporated into 
   a database front-end as pursued in idea 1.
+  </p>
   </li>
   <li><h3><a href="sbgn_er.html">Extend layout to SBGN-ER formalism</a></h3>
+  <p>
   SBGN-ER (Entity Relationship) is an alternative way to graphically represent reaction networks. Although it is initially more complex
   than the so far used SBGN-PD (Process Description) it's complexity increases less drastic in highly combinatorial reaction networks,
   where a number of species can interact in arbitrary order with one another. Here we propose to extend the layout algorithm to also support this 
   network type optimally. 
+  </p>
   </li>
-  <li><h3><a href="gnc.html">Make a client-side version of the layout module using Google Native Client</a></h3></li>
+  <li><h3><a href="gnc.html">Make a client-side version of the layout module using Google Native Client</a></h3>
+  <p>
   biographer's layouter is implemented in C++ for speed reasons. Currently this requires the layout to be calculated on the server. In a high load multi-user
   scenario this will lead to long response times. A layout calculation on the client side will hence dramatically increase the user capacity of the server. Clearly, the speed 
   issue exists on the client side as well such that we need to keep the C++ implementation. A way to overcome this issue is to use Google Native client which
   allows to execute compiled code within the client's browser. 
+  </p>
+  </li>
 <!--  <li><h3>Implement a Grid-based layout in JavaScript</h3></li>-->
 </ol>
 
 <h1>Guide to students</h1>
 <ol>
-<li>We are seeking eager and highly skilled students willing to contribute to open
+<li><p>We are seeking eager and highly skilled students willing to contribute to open
 source in a research environment. Interest in biological or medical engineering
 is a strong plus.
-<li>We recommend you that you contact us already before you send in your
+</p></li>
+<li><p>We recommend you that you contact us already before you send in your
 application. In this way you can obtain more information and we can also help
 you with your submission.
-<li>Apart from the ideas presented above we are open to suggestions from students.
+</p></li>
+<li><p>Apart from the ideas presented above we are open to suggestions from students.
 If you would like to contribute an idea to the project please include a detailed
 description of it in your application.
-<li>Your application should include a statement of interest (why do you want to
+</p></li>
+<li><p>Your application should include a statement of interest (why do you want to
 participate), a project proposal (following one of our ideas or an independent
 idea) with preliminary timeline, as well as your CV stressing on your
 experiences. Please note, the knowledge of the computer languages (C/C++,
 python or JS, depending on the proposal) are a prerequisite.
-<li>Take one of the tests or provide relevant code examples. Although we do not
+</p></li>
+<li><p>Take one of the tests or provide relevant code examples. Although we do not
 require you to complete the test, doing so may increase the chances of your
 application.
-<li>Applications to our offered projects go through the Google Summer of Code
+</p></li>
+<li><p>Applications to our offered projects go through the Google Summer of Code
 website (<a href="http://www.google-melange.com/gsoc/homepage/google/gsoc2012">http://www.google-melange.com/gsoc/homepage/google/gsoc2012</a>). There you can find all information about
 the admission. Please note that the application window is open only from March
 26 to April 6, 2011.
-<li>Google grants a stipend to the accepted students. This comes along with the
+</p></li>
+<li><p>Google grants a stipend to the accepted students. This comes along with the
 liability to proceed as described in the project proposal. Google requires us to
 report on your overall progress. For the projects mentioned above you can expect
 at least 1.5 months of full-time work between May 21 and August 24.
 Please check the <a href="http://www.google-melange.com/document/show/gsoc_program/google/gsoc2012/faqs">FAQ</a> 
 and <a href="http://www.google-melange.com/document/show/gsoc_program/google/gsoc2012/userguide">User Guide</a> on the google website for application
 advice.
+</p></li>
 </ol>
 
 <h1>Biological reaction networks</h1>
