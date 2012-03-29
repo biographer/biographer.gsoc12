@@ -1,79 +1,127 @@
 <!DOCTYPE html>
 
 <html>
+
 <head>
-  <title>biographer: Google Summer of Code 2012</title>
-  <link rel="stylesheet" href="main.css" type="text/css" />
+	<title>biographer: Google Summer of Code 2012</title>
+	<link rel="stylesheet" href="main.css" type="text/css" />
 </head>
+
 <body>
-<div>
-    <div>
-<h1>Boolean network visualization</h1>
-Our goal for this idea is to visualize a Boolean Simulation on a reaction
-network inside the biographer component developed in last year's GSoC.
+	<div>
+	<div>
 
-<h2>Motivation</h2>
-<p>
-Boolean networks are a simplified way to describe regulatory networks. According to this
-simplification, species can only have two states,
-either active or inactive. It has been shown in various approaches that Boolean
-networks can reproduce experimental behavior of biological systems while still
-being simple to handle and computationally less challenging than for instance
-ordinary differential equation models.
-</p>
-<p>
-In order to graphically represent the evolution of reaction networks over time,
-we will integrate a tool into the existing biographer software which creates a
-Boolean network from the the reaction graph by an automated model generation
-algorithm (like <a href="http://code.google.com/p/libscopes/">libScopes</a>) and which subsequently simulates it. The Boolean network and
-the reaction graph will be synchronized in a way that modifications on the
-reaction graph are automatically applied to the Boolean network which thus can
-be modified interactively.
-</p>
-<p>
-Furthermore, biographer already includes a possibility to directly load Boolean
-networks from the existing package <a href="http://code.google.com/p/booleannet/">booleannet</a>. This will be extended to other
-packages like R's <a href="http://www.informatik.uni-ulm.de/ni/mitarbeiter/HKestler/boolnet/">BoolNet</a> and libScopes. This direct import however requires a
-visualization to be created from the Boolean network data automatically (i.e.
-the other way around as mentioned above). In particular, Boolean
-networks are best represented by the <a href="http://www.sbgn.org/">SBGN</a> activity flow standard which also
-includes symbols for the logical functions like AND or OR. The biographer
-component has to be extended accordingly.
-</p>
-<p>
-The generated Boolean network together with its  initial conditions will be
-submitted to the server for the calculations of the simulation. The approach
-will start with deterministic synchronous Boolean models but can also be
-extended to asynchronous or probabilistic Boolean networks. 
-</p>
+	<h1>Boolean network simulation</h1>
+	Our goal for this idea is to extend the biographer
+	to simulate and analyze Boolean networks.
+	In this summer, we will start with deterministic synchronous Boolean models.
+	(After that, we will go on to asynchronous and probabilistic Boolean networks,
+	as well as to simulating more complex kinds of kinetics.)
 
-<h2>Core Specifications and features:</h2>
+	<h2>Motivation</h2>
+	<p>
+	Boolean networks are a simple approach to simulate regulatory
+	networks, analyze their behavior and predict possible outcomes.
+	Species in a Boolean network can only have two states, active or inactive.
+	In various approaches it has been shown, that Boolean
+	networks can reproduce the behavior of biological systems while still
+	being simple to handle.
+	</p>
 
-<ol>
-<li> Based on existing Boolean simulation tools (e.g. booleannet in python or
-BoolNet in R)
-<li> Automated generation of a Boolean network from defined reaction networks by
-automatic generation algorithm
-<li> Input of defined Boolean network and visualization using SBGN activity flow
-representation
-<li> Input initial state for simulation (e.g. selecting nodes in the graph)
-<li> Load state-spaces predefined by the network creator in runtime
-<li> Representation of synchronous Boolean simulation in the biographer reaction
-graph through time-dependent colors/shades of vertices (variable state) and
-edges (edge activity)
-<li> Manipulation of steady states through clicking on nodes, thereby changing
-their state and see how perturbations propagate through network
-<li> Possible extension to asynchronous or probabilistic Boolean network
-simulation with continuous shading of nodes for expression probability
-</ol>
-<h2>Mentors:</h2>
+	<h2>Project goals during this summer</h2>
 
-<ul>
-<li>Till Scharp
-<li>Matthias Bock
-</ul>
-</div>
-</div>
+	<h3>Model import</h3>
+	<p>
+	In order to graphically represent the evolution of activities in a reaction network over time,
+	possibilies to load Boolean models from existing
+	packages, like <a href="http://code.google.com/p/booleannet/">booleannet</a> or
+	<a href="http://www.informatik.uni-ulm.de/ni/mitarbeiter/HKestler/boolnet/">R's BoolNet</a>
+	shall at first be coded.
+	</p>
 
+	<h3>Automated model generation</h3>
+	<p>
+	In a second approach, which will be essential
+	for all cases, in which no curated Boolean model is available for a network,
+	a tool which creates a basic Boolean model from a network through automated model generation
+	shall be implemented.
+	For this approach <a href="http://code.google.com/p/libscopes/">libScopes</a> project will provide a good start.
+	</p>
+
+	<h3>Model export: SBML-LRG implementation</h3>
+	<p>
+	After the user has created a reasonable model for his network,
+	he will in most cases want to save it.
+	Therefore we want the currently supported <a href="http://sbml.org">SBML</a> import/export to be extended
+	by implementation of the
+	<a href="http://sbml.org/Community/Wiki/SBML_Level_3_Proposals/Qualitative_Models">SBML-LRG standard</a>, which allows
+	for implementation of models into SBML files.
+	</p>
+
+	<h3>Model visualization</h3>
+	<p>
+	For the visualization of networks,
+	<a href="http://code.google.com/p/biographer/source/browse?repo=visualization">biographer's existing UI</a>
+	will be used,
+	which already provides for <a href="http://www.sbgn.org/">SBGN</a> specification conformity.
+	The currently supported representation of networks
+	through <i>process description</i> (PD; see also SBGN specification)
+	must therefore be extended to support the <i>activity flow</i> standard (AF),
+	which additionally includes symbols for logical functions like <b>AND</b> and <b>OR</b>.
+	</p>
+
+	<h3>Interactive model simulation</h3>
+	<p>
+	A Boolean model's update rules shall be provided to the browser as JavaScript,
+	allowing for in-browser simulation of the time-dependent evolution
+	of node states.
+	The state (on/off) of each node shall be changeable by clicking it.
+	Appropriate functions have to be integrated into existing biographer UI
+	JavaScript code, to change e.g. the color of a node.
+	</p>
+
+	<h3>Model analysis</h3>
+	<p>
+	The user's Boolean model will also be
+	submitted to the server for analysis.
+	We want to provide a summary of "interesting" information about the network to the user:
+	trajectory lengths, cyclic attractors or steady states.
+	</p>
+
+	<h2>Necessary skills</h2>
+	The biographer consists at first of a server, which is written in Python (we are using the
+	Python web framework web2py, it's very easy to learn if you don't know it).
+	On the other hand, there is the browser UI: Therefore you need to know about HTML and
+	have a good experience with JavaScript.
+	You will not have to start from scratch, but advance existing code, which makes your work easier,
+	as soon as you are familiar with the code.
+	To estimate the complexity of the existing code, you may want to have a look at the
+	source repositories of <a href="http://code.google.com/p/biographer/source/browse?repo=server">server</a>
+	and <a href="http://code.google.com/p/biographer/source/browse?repo=simulator">simulator</a>
+	but don't worry, we are working as a team and you can always ask any questions.
+
+	<h2>Mentors:</h2>
+
+	<ul>
+	<li><a href="mailto:till.scharp@googlemail.com">Till Scharp</a></li>
+	<li><a href="mailto:matthias.bock@hu-berlin.de">Matthias Bock</a></li>
+	</ul>
+	<br/>
+	Please feel free to ask all questions you may have on the students' discussion list:<br/>
+	<ul>
+	<li><a href="http://groups.google.com/group/biographer-gsocstud?pli=1">Mailing-List</a>
+	</li>
+	<li><a href="mailto:biographer-gsocstud@googlegroups.com">biographer-gsocstud@googlegroups.com</a>
+	</li>
+	</ul>
+	We, Till and Matthias, will also be there and answear everything you need to know for you application.
+	<br/>
+	<br/>
+	You may also want to check out our small <a href="http://code.google.com/p/biographer/wiki/index?tm=6">Wiki</a>,
+	which provides some basic information on how everything works so far.
+
+	</div>
+	</div>
 </body>
+
 </html>
